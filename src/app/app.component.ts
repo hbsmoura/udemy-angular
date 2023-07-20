@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-angular';
+    title = 'udemy-angular';
+
+    jogoEmAndamento = true
+    jogoVencido = false
+
+    encerrarJogo(jogoVencido: boolean) {
+        this.jogoEmAndamento = false
+        this.jogoVencido = jogoVencido
+    }
+
+    reiniciarJogo() {
+        this.jogoEmAndamento = true
+        this.jogoVencido = false
+    }
 }
